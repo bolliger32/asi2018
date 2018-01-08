@@ -26,8 +26,8 @@ VAR_total=sum(VAR_F)
 % Encontramos la matriz T que transforma linealmente a F
 % conviertiendola en Z
 %
-alfa=45; 
-%alfa=55; 
+% alfa=45; 
+alfa=55; 
 
 a=alfa*pi/180;
 E=[cos(a) -sin(a)

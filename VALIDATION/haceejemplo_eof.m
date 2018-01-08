@@ -23,7 +23,7 @@ for i=1:length(anhos)
     tsm(i,:)=aux(puntero);
 end
 
-campo=reshape(NaN(length(lon),length(lat)),length(lon)*length(lat),1)
+campo=reshape(NaN(length(lon),length(lat)),length(lon)*length(lat),1);
 campo(puntero)=tsm(1,:);
 figure(2),contourf(lon,lat,reshape(campo,length(lon),length(lat))'),colorbar
 
@@ -46,7 +46,7 @@ L(1:10)/sum(L)
 
 
 %%
-modo=1;
+modo=3;
 % A estandarizado
 Ac=A(:,modo)/std(A(:,modo));
 % E como correlacion
@@ -59,7 +59,7 @@ subplot(211)
 plot(anhos,Ac)
 title(['Componente principal modo ' num2str(modo) ', ' num2str(L(modo)/sum(L)*100) '%'])
 subplot(212)
-campo=reshape(NaN(length(lon),length(lat)),length(lon)*length(lat),1)
+campo=reshape(NaN(length(lon),length(lat)),length(lon)*length(lat),1);
 campo(puntero)=Ec;
 contourf(lon,lat,reshape(campo,length(lon),length(lat))'),colorbar
 title('Patron espacial como correlacion')
